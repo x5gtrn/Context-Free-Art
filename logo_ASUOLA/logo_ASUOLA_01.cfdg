@@ -1,0 +1,90 @@
+startshape position
+
+rule position {
+	line1 {
+		x  2.9
+	}
+
+	line2 {
+		x 2.3
+		y -1.2
+	}
+
+	line3 {
+		x 1.7
+		y -2.4
+	}
+
+	line4 {
+		x 1.1
+		y -3.6
+	}
+}
+
+rule line1 {
+	circle_on {
+	}
+	circle_off {
+		x 1.2
+	}
+}
+
+rule line2 {
+	circle_on {
+	}
+	circle_on {
+		x 1.2
+	}
+	circle_off {
+		x 2.4
+	}
+}
+
+rule line3 {
+	circle_off {
+	}
+	circle_off {
+		x 1.2
+	}
+	circle_on {
+		x 2.4
+	}
+	circle_off {
+		x 3.6
+	}
+}
+
+rule line4 {
+	circle_on {
+	}
+	circle_off {
+		x 1.2
+	}
+	circle_off {
+		x 2.4
+	}
+	circle_off {
+		x 3.6
+	}
+	circle_on {
+		x 4.8
+	}
+}
+
+rule circle_on {
+	CIRCLE {
+	}
+}
+
+rule circle_off {
+	CIRCLE {
+	}
+	CIRCLE {
+		s 0.9 0.9
+		x 0.01
+		sat 0
+		b 1
+	}
+}
+
+
